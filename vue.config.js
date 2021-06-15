@@ -1,5 +1,5 @@
 module.exports = {
-  publicPath: '/blog',
+  publicPath: '/blogs',
   lintOnSave: false,
   runtimeCompiler: true,
   configureWebpack: {
