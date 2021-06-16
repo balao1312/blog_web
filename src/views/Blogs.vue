@@ -9,7 +9,7 @@
             <div class="author">{{ blog.author }} @</div>
           </CCardHeader>
           <CCardBody color="white">
-            <div class="content">{{ blog.content }}</div>
+            <div class="content"><pre>{{ blog.content }}</pre></div>
           </CCardBody>
         </CCard>
       </CCol>
@@ -40,9 +40,10 @@ export default {
       await this.$http.get(`${this.API_URL}/blog`).then((res) => {
         console.log("done fetching ...");
         this.blogs = res.data;
-        // console.log(this.articles)
+        // console.log(this.blogs)
       });
     },
+
     datetime_to_string(datetime) {
       let dd = new Date(datetime);
       let str =
@@ -92,6 +93,6 @@ export default {
   top: 6px;
 }
 .content {
-  font-size: 16px;
+  font-size: 20px;
 }
 </style>
