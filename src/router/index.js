@@ -7,6 +7,7 @@ const TheContainer = () => import('@/containers/TheContainer')
 // Views
 
 const Blogs = () => import('@/views/Blogs.vue')
+const CreateBlog = () => import('@/views/CreateBlog.vue')
 
 Vue.use(Router)
 
@@ -29,6 +30,11 @@ function configRoutes () {
           path: 'blogs',
           name: 'Blogs',
           component: Blogs
+        },
+        {
+          path: 'createblog',
+          name: 'CreateBlog',
+          component: CreateBlog
         },
       ]
     },

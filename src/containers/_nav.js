@@ -12,6 +12,12 @@ export default [
           text: 'NEW'
         }
       },
+      {
+        _name: 'CSidebarNavItem',
+        name: '寫點什麼',
+        to: '/createblog',
+        icon: 'cilNotes',
+      },
     ]
   }
 ]
