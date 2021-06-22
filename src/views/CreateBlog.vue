@@ -2,15 +2,12 @@
   <div>
   <CModal centered :show.sync="showDone" color="dark">
         <template v-slot:header> 訊息 </template>
-        匯入完成！
+        內容已新增！
         <template v-slot:footer>
           <CButton
             size="lg"
             color="info"
-            @click="
-              showDone = false;
-              cleanData();
-            "
+            @click="goNewBlogs()"
           >
             OK !
           </CButton>
@@ -47,7 +44,7 @@
 		v-model="content"
       />
     </div>
-	<div style="float: right">
+	<div>
 	<CButton
           size="lg"
           color="info"
@@ -103,6 +100,10 @@ export default {
       });
     },
 
+	goNewBlogs() {
+		this.$router.push("blogs");
+	},
+
     cleanData() {
 		this.author = ''
 		this.title = ''
@@ -111,36 +112,3 @@ export default {
   },
 };
 </script>
-
-<style>
-/* .center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: auto;
-}
-.title {
-  float: left;
-  color: white;
-  font-size: 24px;
-  margin: auto;
-}
-.time {
-  position: relative;
-  float: right;
-  color: white;
-  font-size: 18px;
-  top: 6px;
-}
-.author {
-  position: relative;
-  float: right;
-  color: white;
-  font-size: 18px;
-  right: 10px;
-  top: 6px;
-}
-.content {
-  font-size: 20px;
-} */
-</style>
