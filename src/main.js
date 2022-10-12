@@ -25,7 +25,7 @@ new Vue({
   },
   provide: {
     // vue global variable
-    // API_URL: "https://www.balao1312.ga/blog-api",
-    API_URL: "http://172.104.68.207/blog-api",
+    API_URL: "https://www.balao1312.ga/blog-api",
+    // API_URL: "http://172.104.68.207/blog-api",
   }
 })
